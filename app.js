@@ -24,23 +24,56 @@ $(document).ready(function() {
 		console.log("amount updated?")
 	});
 
-	$( ".sort" ).click(function(event) {
-		$(".sort").removeClass("active")
+	$(".sorting").click(function(event) {
+		$(".sorting").removeClass("active")
+		$(".sorting_asc").removeClass("active")
+		$(".sorting_dsc").removeClass("active")
+		console.log("toggle class?")
+		console.log(this)
 		$(this).addClass("active")
 	});
 
 // $('#useageData').DataTable();
 
-$.fn.dataTable.ext.search.push(
-    function( settings, data, dataIndex ) {
-        var min = parseInt( $('#minAmount').val(), 10 );
-        var max = parseInt( $('#maxAmount').val(), 10 );
-        var age = parseFloat( data[3] ) || 0; // use data for the age column
+// $.fn.dataTable.ext.search.push(
+//     function( settings, data, dataIndex ) {
+//         var min = parseInt( $('#minAmount').val(), 10 );
+//         var max = parseInt( $('#maxAmount').val(), 10 );
+//         var age = parseFloat( data[3] ) || 0; // use data for the age column
  
-        if ( ( isNaN( min ) && isNaN( max ) ) ||
-             ( isNaN( min ) && age <= max ) ||
-             ( min <= age   && isNaN( max ) ) ||
-             ( min <= age   && age <= max ) )
+//         if ( ( isNaN( min ) && isNaN( max ) ) ||
+//              ( isNaN( min ) && age <= max ) ||
+//              ( min <= age   && isNaN( max ) ) ||
+//              ( min <= age   && age <= max ) )
+//         {
+//             return true;
+//         }
+//         return false;
+//     }
+// );
+
+
+$.fn.dataTableExt.afnFiltering.push(
+    function( oSettings, aData, iDataIndex ) {
+        var iMin = parseFloat(document.getElementById('minAmount').innerHTML);
+        var iMax = parseFloat(document.getElementById('maxAmount').innerHTML);
+        iVersion = parseFloat(aData[8]) == "-" ? 0 : parseFloat(aData[8]);
+        // console.log(iVersion);
+        console.log(aData);
+        console.log(parseFloat(aData[8]));
+        if ( iMin == "" && iMax == "" )
+        {
+            return true;
+        }
+        else if ( iMin == "" && iVersion < iMax )
+        {
+            return true;
+        }
+        else if ( iMin < iVersion && "" == iMax )
+        {
+            return true;
+        }
+        else if ( iMin < iVersion && iVersion < iMax )
         {
             return true;
         }
@@ -49,12 +82,29 @@ $.fn.dataTable.ext.search.push(
 );
 
 
- var table = $('#useageData').DataTable();
+ // var table = $('#useageData').DataTable();
      
+/* Initialise datatables */
+    var oTable = $('#useageData').dataTable(
+    	{
+        "bPaginate": false,
+        "bLengthChange": false,
+        "bFilter": true,
+        "bSort": true,
+        "bInfo": true,
+        "bAutoWidth": false
+    }
+    	);
+     
+    /* Add event listeners to the two range filtering inputs */
+    $('ui-slider-handle').mouseup( function() { oTable.fnDraw(); } );
+    // $('#maxAmount').mouseup( function() { oTable.fnDraw(); } );
+
+
     // Event listener to the two range filtering inputs to redraw on input
-    $('#minAmount, #maxAmount').mouseup( function() {
-        table.draw();
-    } );
+    // $('#minAmount, #maxAmount').mouseup( function() {
+        // oTable.fnDraw();
+    // } );
 
 
 

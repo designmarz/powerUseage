@@ -3,8 +3,8 @@ $(function() {
   $( "#slider-range" ).slider({
     range: true,
     min: 0.0,
-    max: 1000.0,
-    values: [ 0.0, 96.0 ],
+    max: 200.0,
+    values: [ 0.0, 150.0 ],
     slide: function( event, ui ) {
       $( "#amount" ).val( ui.values[ 0 ] + "kWh - " + ui.values[ 1 ]+ " kWh" );
       $( "#minAmount" ).html( $( "#slider-range" ).slider( "values", 0 ));

@@ -34,13 +34,13 @@
 		</div>
 			<div class="row">
 				<div class="large-1 columns">
-					<div class="kWh" id="minAmount">11</div>
+					<div class="kWh" id="minAmount">0</div>
 				</div>
 				<div class="large-4 columns">
 					<div id="slider-range"></div>
 				</div>
 				<div class="large-1 columns">
-					<div class="kWh" id="maxAmount">11</div>
+					<div class="kWh" id="maxAmount">0</div>
 				</div>
 				<div class="large-6 columns">
 			</div>
@@ -54,17 +54,17 @@
 			  <input class="fuzzy-search" id="amount" placeholder="Search" disabled="true" />
 			  kWh</label> -->
 			  <!-- <input class="search" type="text" id="amount"> -->
-			  <table id="useageData" table border="0" cellspacing="0" cellpadding="5" id="useageTable">
+			  <table id="useageData" table border="0" cellspacing="0" cellpadding="5" class="useageTable">
 			  	<thead>
-			  		<th class="sort" data-sort="panelName">PANEL</th>
-			  		<th class="sort" data-sort="circuit">CIRCUIT</th>
-			  		<th class="sort" data-sort="endUse">END USE</th>
-			  		<th class="sort" data-sort="userLabel">LABEL</th>
-			  		<th class="sort" data-sort="load">LOAD</th>
-			  		<th class="sort" data-sort="min15">15 MIN</th>
-			  		<th class="sort" data-sort="hour1">1 HOUR</th>
-			  		<th class="sort" data-sort="hour6">6 HOUR</th>
-			  		<th class="sort" data-sort="hour24">24 HOUR</th>
+			  		<th class="sorting" data-sort="panelName">PANEL</th>
+			  		<th class="sorting" data-sort="circuit">CIRCUIT</th>
+			  		<th class="sorting" data-sort="endUse">END USE</th>
+			  		<th class="sorting" data-sort="userLabel">LABEL</th>
+			  		<th class="sorting" data-sort="load">LOAD</th>
+			  		<th class="sorting" data-sort="min15">15 MIN</th>
+			  		<th class="sorting" data-sort="hour1">1 HOUR</th>
+			  		<th class="sorting" data-sort="hour6">6 HOUR</th>
+			  		<th class="sorting" data-sort="hour24">24 HOUR</th>
 			  	</thead>
 			  	<tbody class="list">
 			  		<tr>
@@ -188,7 +188,6 @@
 	</div>
 	<script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
 	<script src="https://cdn.datatables.net/plug-ins/1.10.7/integration/foundation/dataTables.foundation.js"></script>
-	
 	<!-- <script src="list.js"></script> -->
 	<!-- <script src="list.fuzzysearch.min.js"></script> -->
 	<script src="app.js"></script>
@@ -198,6 +197,6 @@ $(document).ready(function(){
     $('#useageData').DataTable();
 });
 	</script>
-	<script> $(document).foundation(); </script>
+	<!-- <script> $(document).foundation(); </script> -->
 </body>
 </html>
