@@ -28,8 +28,8 @@ $(document).ready(function() {
 		$(".sorting").removeClass("active")
 		$(".sorting_asc").removeClass("active")
 		$(".sorting_dsc").removeClass("active")
-		console.log("toggle class?")
-		console.log(this)
+		// console.log("toggle class?")
+		// console.log(this)
 		$(this).addClass("active")
 	});
 
@@ -59,8 +59,8 @@ $.fn.dataTableExt.afnFiltering.push(
         var iMax = parseFloat(document.getElementById('maxAmount').innerHTML);
         iVersion = parseFloat(aData[8]) == "-" ? 0 : parseFloat(aData[8]);
         // console.log(iVersion);
-        console.log(aData);
-        console.log(parseFloat(aData[8]));
+        // console.log(aData);
+        // console.log(parseFloat(aData[8]));
         if ( iMin == "" && iMax == "" )
         {
             return true;
@@ -88,7 +88,7 @@ $.fn.dataTableExt.afnFiltering.push(
     var oTable = $('#useageData').dataTable(
     	{
         "bPaginate": false,
-        "bLengthChange": false,
+        "bLengthChange": true,
         "bFilter": true,
         "bSort": true,
         "bInfo": true,
@@ -97,7 +97,8 @@ $.fn.dataTableExt.afnFiltering.push(
     	);
      
     /* Add event listeners to the two range filtering inputs */
-    $('ui-slider-handle').mouseup( function() { oTable.fnDraw(); } );
+    $('span.ui-slider-handle.ui-state-default.ui-corner-all').mouseup( function() { oTable.fnDraw(); } );
+    $('span.ui-slider-handle.ui-state-default.ui-corner-all').mousedown( function() { oTable.fnDraw(); } );
     // $('#maxAmount').mouseup( function() { oTable.fnDraw(); } );
 
 
