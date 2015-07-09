@@ -69,7 +69,7 @@ $(document).ready(function() {
 
     $('body').mouseup( function() { 
         oTable.fnDraw(); } );
-    $('body').mousemove( function() { 
+    $('.slider-box').mousemove( function() { 
         oTable.fnDraw(); } );
   
 // $(function() {
