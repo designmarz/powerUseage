@@ -1,10 +1,7 @@
 $(document).ready(function() {
 
 
-	$( "span.ui-slider-handle.ui-state-default.ui-corner-all").mousedown(function() {
-		$( "#amount" ).click();
-		console.log("amount updated?")
-	});
+
 
 	$(".sorting").click(function(event) {
 		$(".sorting").removeClass("active")
@@ -72,7 +69,7 @@ $.fn.dataTableExt.afnFiltering.push(
     $('span.ui-slider-handle.ui-state-default.ui-corner-all').mouseup( function() { oTable.fnDraw(); } );
     $('span.ui-slider-handle.ui-state-default.ui-corner-all').mousedown( function() { oTable.fnDraw(); } );
   
-$(function() {
+// $(function() {
 
   $( "#slider-range" ).slider({
     range: true,
@@ -94,7 +91,9 @@ $(function() {
 
 
 
-});
+// });
+
+
 
 
 });
