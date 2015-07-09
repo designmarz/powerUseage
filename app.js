@@ -3,26 +3,26 @@ $(document).ready(function() {
 
 
 
-	$(".sorting").click(function(event) {
+	$(".headBtn").click(function(event) {
 		$(".sorting").removeClass("active")
 		$(".sorting_asc").removeClass("active")
-		$(".sorting_dsc").removeClass("active")
+		$(".sorting_desc").removeClass("active")
 		$(this).addClass("active")
 	});
 
-	$(".sorting_asc").click(function(event) {
-		$(".sorting").removeClass("active")
-		$(".sorting_asc").removeClass("active")
-		$(".sorting_dsc").removeClass("active")
-		$(this).addClass("active")
-	});
+	// $(".sorting_asc").click(function(event) {
+	// 	$(".sorting").removeClass("active")
+	// 	$(".sorting_asc").removeClass("active")
+	// 	$(".sorting_desc").removeClass("active")
+	// 	$(this).addClass("active")
+	// });
 
-	$(".sorting_dsc").click(function(event) {
-		$(".sorting").removeClass("active")
-		$(".sorting_asc").removeClass("active")
-		$(".sorting_dsc").removeClass("active")
-		$(this).addClass("active")
-	});
+	// $(".sorting_desc").click(function(event) {
+	// 	$(".sorting").removeClass("active")
+	// 	$(".sorting_asc").removeClass("active")
+	// 	$(".sorting_dsc").removeClass("active")
+	// 	$(this).addClass("active")
+	// });
 
 	$.fn.dataTableExt.afnFiltering.push(
 		function( oSettings, aData, iDataIndex ) {
@@ -67,8 +67,10 @@ $(document).ready(function() {
     	);
      
 
-    $('span.ui-slider-handle.ui-state-default.ui-corner-all').mouseup( function() { oTable.fnDraw(); } );
-    $('span.ui-slider-handle.ui-state-default.ui-corner-all').mousedown( function() { oTable.fnDraw(); } );
+    $('body').mouseup( function() { 
+        oTable.fnDraw(); } );
+    $('body').mousemove( function() { 
+        oTable.fnDraw(); } );
   
 // $(function() {
 
