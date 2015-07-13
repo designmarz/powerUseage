@@ -1,0 +1,31 @@
+PANEL,CIRCUIT,END USE,LABEL,LOAD,15 MIN,1 HOUR,6 HOUR,24 HOUR
+GG,11 - Patio Lights,Space Heating,,3.2,1.3,3.9,22.8,79.9
+FF,7 - Dishwasher,Cooking,,3.9,1.3,3.9,34.2,56.6
+KK,11 - Dishwasher,Lighting,,6.8,0.8,4.6,27.4,102.8
+GG,7 - Dishwasher,Cooking,,1.6,1.9,5.8,20.0,113.2
+GG,9 - Dishwasher,Cooking,,6.7,1.5,5.5,19.3,112.5
+GF,17 - Booster Heater,Cooking,,2.6,1.5,4.2,32.5,105.4
+KG,13 - Booster Heater,Space Heating,,3.0,0.3,3.3,31.8,84.5
+GH,17 - Booster Heater,Space Heating,,1.2,1.3,3.6,32.9,113.4
+GH,9 - Dishwasher,Cooking,Exterior,2.7,0.4,4.7,27.1,94.3
+GK,17 - Booster Heater,Cooking,,4.3,0.8,4.1,32.7,66.3
+GG,13 - Booster Heater,Cooking,,1.1,1.2,5.6,26.3,75.4
+HF,13 - Booster Heater,Cooking,,5.0,0.5,2.2,25.9,111.9
+FG,13 - Booster Heater,Space Heating,Exterior,5.4,1.6,5.5,23.2,81.4
+GG,7 - Dishwasher,Cooking,,2.9,0.9,3.6,26.3,100.5
+GF,13 - Booster Heater,Lighting,,6.7,1.9,2.7,32.3,102.7
+FG,7 - Dishwasher,Space Heating,,6.3,1.4,3.3,33.6,66.1
+FG,11 - Dishwasher,Cooking,,5.6,1.7,2.7,20.0,85.9
+FH,9 - Dishwasher,Cooking,,7.4,1.7,3.6,31.8,74.0
+GK,17 - Booster Heater,Space Heating,,7.2,1.9,5.8,29.3,80.6
+FG,13 - Booster Heater,Cooking,,7.6,0.4,3.5,35.0,106.9
+GH,17 - Booster Heater,Space Heating,,4.3,0.6,4.9,24.3,90.5
+GK,11 - Patio Lights,Space Heating,,4.9,1.4,3.9,24.5,95.2
+FK,11 - Patio Lights,Cooking,,7.2,1.5,3.7,33.0,55.0
+HG,17 - Booster Heater,Lighting,,7.2,1.4,4.7,26.1,85.4
+KG,17 - Booster Heater,Space Heating,,3.3,0.2,2.3,19.3,72.3
+GG,9 - Dishwasher,Space Heating,,2.5,0.6,3.4,34.8,84.8
+GH,11 - Dishwasher,Space Heating,,5.1,0.7,5.2,19.6,93.8
+GH,11 - Patio Lights,Cooking,,3.2,1.8,5.5,31.1,68.5
+GF,13 - Booster Heater,Cooking,,2.2,1.7,3.6,29.5,71.2
+GF,11 - Dishwasher,Lighting,,1.1,1.0,2.3,27.6,102.8
